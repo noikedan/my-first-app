@@ -1,0 +1,17 @@
+<div>
+    <h1>北天サービス1年満期</h1>
+    <h2>年率36%</h2>
+</div>
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        name <input type="text" name="name" size="20"><br>
+        money <input type="text" name="money" size="20"><br>
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+{% for post in posts %}
+    <div>
+        <p>{{ post.text}}</p>
+    </div>
+{% endfor %}
